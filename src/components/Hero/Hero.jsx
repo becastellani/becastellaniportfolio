@@ -23,7 +23,7 @@ function Stats({ className, data }) {
         <div className={styles.statLabel}>{data.hero.statsYearsLabel}</div>
       </div>
       <div className={styles.stat}>
-        <div className={styles.statNumber}>20<span>+</span></div>
+        <div className={styles.statNumber}>2500<span>+</span></div>
         <div className={styles.statLabel}>{data.hero.statsProjectsLabel}</div>
       </div>
     </div>
@@ -54,9 +54,9 @@ export default function Hero({ data }) {
     background: { color: { value: "transparent" } },
     fpsLimit: 60,
     particles: {
-      color: { value: theme === "dark" ? "#00d4aa" : "#009b78" },
+      color: { value: theme === "dark" ? "#f59e0b" : "#b45309" },
       links: {
-        color: theme === "dark" ? "#00d4aa" : "#009b78",
+        color: theme === "dark" ? "#f59e0b" : "#b45309",
         distance: 150,
         enable: true,
         opacity: 0.08,

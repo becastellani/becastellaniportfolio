@@ -5,8 +5,10 @@ export const portfolioData = {
     fullName: "Bernardo Castellani",
     role: "Full Stack Developer",
     brandRole: "Full Stack Dev",
-    tagline: "Sistemas financieros de alta escala. Arquitectura que sobrevive a producción.",
-    description: "Desarrollador Full Stack con enfoque en sistemas críticos, microservicios e infraestructura. Transformo requisitos complejos en código confiable, desde consultas optimizadas hasta pipelines orquestados en Kubernetes.",
+    tagline:
+      "Sistemas financieros de alta escala. Arquitectura que sobrevive a producción.",
+    description:
+      "Desarrollador Full Stack con enfoque en sistemas críticos, microservicios e infraestructura. Transformo requisitos complejos en código confiable, desde consultas optimizadas hasta pipelines orquestados en Kubernetes.",
     location: "Toledo — Paraná, Brasil",
     email: "becastellani10@gmail.com",
     phone: "+55 19 99905-0946",
@@ -14,7 +16,7 @@ export const portfolioData = {
     social: {
       github: "https://github.com/becastellani",
       linkedin: "https://www.linkedin.com/in/bernardo-castellani-b515a0203/",
-      discord: "#",
+      discord: null,
     },
   },
 
@@ -40,9 +42,27 @@ export const portfolioData = {
     ],
     databases: ["PostgreSQL", "SQL Server", "MySQL", "Oracle", "MongoDB"],
     tags: [
-      "PHP", "Laravel", "Symfony", "Node.js", "NestJS", "TypeScript", "Python", "Go",
-      "React", "Kubernetes", "Docker", "RabbitMQ", "Redis", "MySQL", "PostgreSQL",
-      "REST APIs", "Microservicios", "CI/CD", "Linux", "Git", "WebScraping",
+      "PHP",
+      "Laravel",
+      "Symfony",
+      "Node.js",
+      "NestJS",
+      "TypeScript",
+      "Python",
+      "Go",
+      "React",
+      "Kubernetes",
+      "Docker",
+      "RabbitMQ",
+      "Redis",
+      "MySQL",
+      "PostgreSQL",
+      "REST APIs",
+      "Microservicios",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "WebScraping",
     ],
   },
 
@@ -62,7 +82,15 @@ export const portfolioData = {
         "Troubleshooting de producción: optimización de queries SQL Server/PostgreSQL y análisis de performance en endpoints críticos",
         "ETLs puntuales con Python/Pandas para migración y reconciliación financiera",
       ],
-      tech: ["PHP", "Kubernetes", "PostgreSQL", "SQL Server", "Python", "Pandas", "REST APIs"],
+      tech: [
+        "PHP",
+        "Kubernetes",
+        "PostgreSQL",
+        "SQL Server",
+        "Python",
+        "Pandas",
+        "REST APIs",
+      ],
     },
     {
       id: 2,
@@ -79,7 +107,16 @@ export const portfolioData = {
         "Implementación de colas RabbitMQ para procesamiento asíncrono: facturas, emails y sincronización de datos",
         "Troubleshooting de producción: análisis de deadlocks MySQL, optimización de jobs programados e investigación de fallos de integración",
       ],
-      tech: ["PHP", "Laravel", "Symfony", "Redis", "RabbitMQ", "Puppeteer", "Selenium", "MySQL"],
+      tech: [
+        "PHP",
+        "Laravel",
+        "Symfony",
+        "Redis",
+        "RabbitMQ",
+        "Puppeteer",
+        "Selenium",
+        "MySQL",
+      ],
     },
     {
       id: 3,
@@ -101,10 +138,32 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      name: "Veracy",
+      description:
+        "Plataforma SaaS de analytics para influenciadores digitales. Scraping de datos de Instagram vía Apify, métricas de engagement e informes estratégicos para creadores de contenido.",
+      longDescription:
+        "Plataforma completa de inteligencia para redes sociales con pipeline de recolección de datos, procesamiento asíncrono y dashboard analítico en tiempo real.",
+      tech: ["Laravel", "Apify", "MySQL", "Queue Jobs", "React", "TypeScript"],
+      github: null,
+      deploy: null,
+      status: "En Desarrollo",
+      featured: true,
+      category: "SaaS",
+    },
+    {
+      id: 2,
       name: "FD SmartCheck",
-      description: "Sistema académico de check-in por QR Code con validación por geolocalización. Seguridad vía HMAC-SHA256 y protección anti-replay en tiempo real.",
-      longDescription: "Arquitectura de seguridad en capas para control de asistencia académica, con firmas criptográficas, validación geoespacial y dashboard en tiempo real.",
-      tech: ["Node.js", "React", "PostgreSQL", "HMAC-SHA256", "Geolocation API"],
+      description:
+        "Sistema académico de check-in por QR Code con validación por geolocalización. Seguridad vía HMAC-SHA256 y protección anti-replay en tiempo real.",
+      longDescription:
+        "Arquitectura de seguridad en capas para control de asistencia académica, con firmas criptográficas, validación geoespacial y dashboard en tiempo real.",
+      tech: [
+        "Node.js",
+        "React",
+        "PostgreSQL",
+        "HMAC-SHA256",
+        "Geolocation API",
+      ],
       github: null,
       deploy: null,
       status: "En Progreso",
@@ -112,10 +171,12 @@ export const portfolioData = {
       category: "Sistemas",
     },
     {
-      id: 2,
+      id: 3,
       name: "ActionPlanner",
-      description: "Sistema de gestión de tareas con dashboard profesional, CRUD completo y autenticación. Frontend en Angular, backend en Node.js.",
-      longDescription: "Gestión de tareas con jerarquía de proyectos, asignación de equipos, seguimiento de progreso e informes exportables.",
+      description:
+        "Sistema de gestión de tareas con dashboard profesional, CRUD completo y autenticación. Frontend en Angular, backend en Node.js.",
+      longDescription:
+        "Gestión de tareas con jerarquía de proyectos, asignación de equipos, seguimiento de progreso e informes exportables.",
       tech: ["Angular", "Node.js", "TypeScript", "PostgreSQL", "JWT"],
       github: "https://github.com/becastellani/ActionPlanner",
       deploy: null,
@@ -124,16 +185,88 @@ export const portfolioData = {
       category: "Productividad",
     },
     {
-      id: 3,
+      id: 4,
       name: "Price Tracker",
-      description: "Sistema de rastreo de precios con web scraping concurrente en Go. Monitorea productos en múltiples e-commerces simultáneamente con alertas configurables.",
-      longDescription: "Scraping paralelo usando goroutines, almacenamiento de historial de precios, sistema de alertas y API REST para consumo externo.",
+      description:
+        "Sistema de rastreo de precios con web scraping concurrente en Go. Monitorea productos en múltiples e-commerces simultáneamente con alertas configurables.",
+      longDescription:
+        "Scraping paralelo usando goroutines, almacenamiento de historial de precios, sistema de alertas y API REST para consumo externo.",
       tech: ["Go", "Goroutines", "PostgreSQL", "REST API", "Cron Jobs"],
       github: "https://github.com/becastellani/go-price-tracker",
       deploy: null,
       status: "Completado",
       featured: false,
       category: "Automatización",
+    },
+    {
+      id: 5,
+      name: "CorpSync MDM",
+      description:
+        "Sistema de monitoreo y gestión de dispositivos móviles corporativos con recolección de datos Flutter/Kotlin y dashboard analítico en tiempo real.",
+      longDescription:
+        "Solución MDM completa para empresas, con agente móvil Flutter/Kotlin recopilando métricas del dispositivo, backend Node.js procesando datos y dashboard React para gestión centralizada de la flota.",
+      tech: ["Flutter", "Kotlin", "Node.js", "PostgreSQL", "React"],
+      github: "https://github.com/becastellani/CorpSyncMDM",
+      deploy: null,
+      status: "Completado",
+      featured: false,
+      category: "Sistemas",
+    },
+    {
+      id: 6,
+      name: "RitmoApp",
+      description:
+        "Aplicación Flutter para productividad remota con reconocimiento de voz e inteligencia artificial.",
+      longDescription:
+        "Asistente de productividad para trabajadores remotos con reconocimiento de voz, almacenamiento local e IA para sugerencias personalizadas de enfoque, pausas y organización según la rutina del usuario.",
+      tech: ["Flutter", "Dart", "Firebase", "AI/ML"],
+      github: "https://github.com/becastellani/RitmoApp",
+      deploy: null,
+      status: "Completado",
+      featured: false,
+      category: "Productividad",
+    },
+    {
+      id: 7,
+      name: "RemoteMouse",
+      description:
+        "Aplicación Flutter para control remoto del computador vía smartphone, con servidor backend en Python.",
+      longDescription:
+        "Cliente móvil Flutter que se comunica vía Socket.IO con servidor Python para control remoto del computador. Permite ajustar volumen, mover el mouse, hacer clics y scroll directamente desde el smartphone.",
+      tech: ["Flutter", "Dart", "Python", "Socket.IO"],
+      github: "https://github.com/becastellani/Flutter-RemoteMouse",
+      deploy: null,
+      status: "Completado",
+      featured: false,
+      category: "Automatización",
+    },
+    {
+      id: 8,
+      name: "User Management API",
+      description:
+        "API REST para gestión de usuarios y productos con autenticación, construida con Node.js, Express y MongoDB.",
+      longDescription:
+        "API REST con operaciones CRUD completas para usuarios y productos, autenticación JWT, validación de datos y estructura modular con Express. Base de datos MongoDB vía Mongoose.",
+      tech: ["Node.js", "Express", "MongoDB", "JWT"],
+      github: "https://github.com/becastellani/UserManagementMongoDB",
+      deploy: null,
+      status: "Completado",
+      featured: false,
+      category: "Sistemas",
+    },
+    {
+      id: 9,
+      name: "Humidity Controller",
+      description:
+        "Sistema embebido de control automático de humedad con Arduino, sensor DHT11, display LCD y relé.",
+      longDescription:
+        "Sistema IoT para monitoreo y control de humedad ambiental. Lee datos del sensor DHT11, muestra en display LCD y acciona el relé automáticamente para encender o apagar el humidificador según umbral configurable.",
+      tech: ["Arduino", "IoT", "C++", "DHT11", "LCD"],
+      github: "https://github.com/becastellani/UmidificadorAutomatico",
+      deploy: null,
+      status: "Completado",
+      featured: false,
+      category: "Sistemas",
     },
   ],
 
@@ -147,7 +280,11 @@ export const portfolioData = {
   ],
 
   certifications: [
-    { name: "Google Cloud Engineering Certification", issuer: "Google", year: "2025" },
+    {
+      name: "Google Cloud Engineering Certification",
+      issuer: "Google",
+      year: "2025",
+    },
     { name: "Laravel — Rocketseat", issuer: "Rocketseat", year: "2024" },
     { name: "PHP — Alura", issuer: "Alura", year: "2023" },
     { name: "Laravel e Symfony — Alura", issuer: "Alura", year: "2023" },
@@ -171,7 +308,7 @@ export const portfolioData = {
 
   hero: {
     statsYearsLabel: "años exp.",
-    statsProjectsLabel: "proyectos",
+    statsProjectsLabel: "horas de código",
     viewProjectsButton: "Ver Proyectos",
     resumeButton: "Currículum",
   },
@@ -186,13 +323,44 @@ export const portfolioData = {
       { name: "Inglés", level: "Avanzado — B2" },
       { name: "Español", level: "Principiante — A1" },
     ],
-    softSkills: ["Resolución de Problemas", "Pensamiento Sistémico", "Ownership", "Comunicación Técnica", "Proactividad", "Liderazgo Técnico"],
+    softSkills: [
+      "Resolución de Problemas",
+      "Pensamiento Sistémico",
+      "Ownership",
+      "Comunicación Técnica",
+      "Proactividad",
+      "Liderazgo Técnico",
+    ],
     skillGroups: [
-      { label: "Backend", items: ["PHP", "Laravel", "Symfony", "Node.js", "NestJS", "Python", "Go", "TypeScript"] },
-      { label: "Frontend", items: ["React", "JavaScript", "HTML5", "CSS3", "Blade", "Twig"] },
-      { label: "Base de Datos", items: ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "Redis"] },
-      { label: "Infraestructura", items: ["Kubernetes", "Docker", "RabbitMQ", "CI/CD", "Linux"] },
-      { label: "Herramientas", items: ["Git", "Selenium", "Puppeteer", "REST APIs", "WebScraping"] },
+      {
+        label: "Backend",
+        items: [
+          "PHP",
+          "Laravel",
+          "Symfony",
+          "Node.js",
+          "NestJS",
+          "Python",
+          "Go",
+          "TypeScript",
+        ],
+      },
+      {
+        label: "Frontend",
+        items: ["React", "JavaScript", "HTML5", "CSS3", "Blade", "Twig"],
+      },
+      {
+        label: "Base de Datos",
+        items: ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "Redis"],
+      },
+      {
+        label: "Infraestructura",
+        items: ["Kubernetes", "Docker", "RabbitMQ", "CI/CD", "Linux"],
+      },
+      {
+        label: "Herramientas",
+        items: ["Git", "Selenium", "Puppeteer", "REST APIs", "WebScraping"],
+      },
     ],
     softSkillsLabel: "Soft skills",
     academicLabel: "Actividad Académica",
@@ -208,7 +376,13 @@ export const portfolioData = {
   projectsConfig: {
     sectionLabel: "Portafolio",
     sectionTitle: "Proyectos",
-    categories: ["Todos", "SaaS", "Sistemas", "Automatización", "Productividad"],
+    categories: [
+      "Todos",
+      "SaaS",
+      "Sistemas",
+      "Automatización",
+      "Productividad",
+    ],
     privateLabel: "Privado / WIP",
     demoLabel: "Demo",
   },
@@ -217,13 +391,15 @@ export const portfolioData = {
     sectionLabel: "Contacto",
     sectionTitle: "¿Hablamos?",
     sectionTitleAccent: "",
-    tagline: "Estoy abierto a conversaciones. Si tienes algo interesante para discutir, envíame un mensaje.",
+    tagline:
+      "Estoy abierto a conversaciones. Si tienes algo interesante para discutir, envíame un mensaje.",
     emailLabel: "Email",
     phoneLabel: "Teléfono",
     locationLabel: "Ubicación",
     footerText: "Construido con React + Vite",
     formTitle: "Envía un mensaje",
-    formSubtitle: "Respondo en hasta 24h. Puede ser sobre oportunidades laborales, colaboraciones técnicas o solo una charla sobre tecnología.",
+    formSubtitle:
+      "Respondo en hasta 24h. Puede ser sobre oportunidades laborales, colaboraciones técnicas o solo una charla sobre tecnología.",
     formNameLabel: "Nombre",
     formNamePlaceholder: "Tu nombre",
     formEmailLabel: "Email",

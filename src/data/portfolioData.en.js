@@ -5,8 +5,10 @@ export const portfolioData = {
     fullName: "Bernardo Castellani",
     role: "Full Stack Developer",
     brandRole: "Full Stack Dev",
-    tagline: "High-scale financial systems. Architecture that survives production.",
-    description: "Full Stack Developer focused on critical systems, microservices and infrastructure. I transform complex requirements into reliable code, from optimized queries to pipelines orchestrated in Kubernetes.",
+    tagline:
+      "High-scale financial systems. Architecture that survives production.",
+    description:
+      "Full Stack Developer focused on critical systems, microservices and infrastructure. I transform complex requirements into reliable code, from optimized queries to pipelines orchestrated in Kubernetes.",
     location: "Toledo — Paraná, Brazil",
     email: "becastellani10@gmail.com",
     phone: "+55 19 99905-0946",
@@ -14,7 +16,7 @@ export const portfolioData = {
     social: {
       github: "https://github.com/becastellani",
       linkedin: "https://www.linkedin.com/in/bernardo-castellani-b515a0203/",
-      discord: "#",
+      discord: null,
     },
   },
 
@@ -40,9 +42,27 @@ export const portfolioData = {
     ],
     databases: ["PostgreSQL", "SQL Server", "MySQL", "Oracle", "MongoDB"],
     tags: [
-      "PHP", "Laravel", "Symfony", "Node.js", "NestJS", "TypeScript", "Python", "Go",
-      "React", "Kubernetes", "Docker", "RabbitMQ", "Redis", "MySQL", "PostgreSQL",
-      "REST APIs", "Microservices", "CI/CD", "Linux", "Git", "WebScraping",
+      "PHP",
+      "Laravel",
+      "Symfony",
+      "Node.js",
+      "NestJS",
+      "TypeScript",
+      "Python",
+      "Go",
+      "React",
+      "Kubernetes",
+      "Docker",
+      "RabbitMQ",
+      "Redis",
+      "MySQL",
+      "PostgreSQL",
+      "REST APIs",
+      "Microservices",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "WebScraping",
     ],
   },
 
@@ -62,7 +82,15 @@ export const portfolioData = {
         "Production troubleshooting: SQL Server/PostgreSQL query optimization and performance analysis on critical endpoints",
         "Ad-hoc ETLs with Python/Pandas for financial migration and reconciliation",
       ],
-      tech: ["PHP", "Kubernetes", "PostgreSQL", "SQL Server", "Python", "Pandas", "REST APIs"],
+      tech: [
+        "PHP",
+        "Kubernetes",
+        "PostgreSQL",
+        "SQL Server",
+        "Python",
+        "Pandas",
+        "REST APIs",
+      ],
     },
     {
       id: 2,
@@ -79,7 +107,16 @@ export const portfolioData = {
         "RabbitMQ queue implementation for async processing: invoices, emails and data synchronization",
         "Production troubleshooting: MySQL deadlock analysis, scheduled job optimization and integration failure investigation",
       ],
-      tech: ["PHP", "Laravel", "Symfony", "Redis", "RabbitMQ", "Puppeteer", "Selenium", "MySQL"],
+      tech: [
+        "PHP",
+        "Laravel",
+        "Symfony",
+        "Redis",
+        "RabbitMQ",
+        "Puppeteer",
+        "Selenium",
+        "MySQL",
+      ],
     },
     {
       id: 3,
@@ -101,10 +138,32 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      name: "Veracy",
+      description:
+        "SaaS analytics platform for digital influencers. Instagram data scraping via Apify, engagement metrics and strategic reports for content creators.",
+      longDescription:
+        "Complete social media intelligence platform with data collection pipeline, async processing and real-time analytics dashboard.",
+      tech: ["Laravel", "Apify", "MySQL", "Queue Jobs", "React", "TypeScript"],
+      github: null,
+      deploy: null,
+      status: "In Development",
+      featured: true,
+      category: "SaaS",
+    },
+    {
+      id: 2,
       name: "FD SmartCheck",
-      description: "Academic check-in system via QR Code with geolocation validation. Security via HMAC-SHA256 and real-time anti-replay protection.",
-      longDescription: "Layered security architecture for academic attendance control, with cryptographic signatures, geospatial validation and real-time dashboard.",
-      tech: ["Node.js", "React", "PostgreSQL", "HMAC-SHA256", "Geolocation API"],
+      description:
+        "Academic check-in system via QR Code with geolocation validation. Security via HMAC-SHA256 and real-time anti-replay protection.",
+      longDescription:
+        "Layered security architecture for academic attendance control, with cryptographic signatures, geospatial validation and real-time dashboard.",
+      tech: [
+        "Node.js",
+        "React",
+        "PostgreSQL",
+        "HMAC-SHA256",
+        "Geolocation API",
+      ],
       github: null,
       deploy: null,
       status: "In Progress",
@@ -112,10 +171,12 @@ export const portfolioData = {
       category: "Systems",
     },
     {
-      id: 2,
+      id: 3,
       name: "ActionPlanner",
-      description: "Task management system with professional dashboard, complete CRUD and authentication. Frontend in Angular, backend in Node.js.",
-      longDescription: "Task management with project hierarchy, team assignment, progress tracking and exportable reports.",
+      description:
+        "Task management system with professional dashboard, complete CRUD and authentication. Frontend in Angular, backend in Node.js.",
+      longDescription:
+        "Task management with project hierarchy, team assignment, progress tracking and exportable reports.",
       tech: ["Angular", "Node.js", "TypeScript", "PostgreSQL", "JWT"],
       github: "https://github.com/becastellani/ActionPlanner",
       deploy: null,
@@ -124,16 +185,88 @@ export const portfolioData = {
       category: "Productivity",
     },
     {
-      id: 3,
+      id: 4,
       name: "Price Tracker",
-      description: "Price tracking system with concurrent web scraping in Go. Monitors products across multiple e-commerces simultaneously with configurable alerts.",
-      longDescription: "Parallel scraping using goroutines, price history storage, alert system and REST API for external consumption.",
+      description:
+        "Price tracking system with concurrent web scraping in Go. Monitors products across multiple e-commerces simultaneously with configurable alerts.",
+      longDescription:
+        "Parallel scraping using goroutines, price history storage, alert system and REST API for external consumption.",
       tech: ["Go", "Goroutines", "PostgreSQL", "REST API", "Cron Jobs"],
       github: "https://github.com/becastellani/go-price-tracker",
       deploy: null,
       status: "Completed",
       featured: false,
       category: "Automation",
+    },
+    {
+      id: 5,
+      name: "CorpSync MDM",
+      description:
+        "Corporate mobile device monitoring and management system with Flutter/Kotlin data collection and real-time analytics dashboard.",
+      longDescription:
+        "Complete MDM solution for enterprises, with Flutter/Kotlin mobile agent collecting device metrics, Node.js backend processing data and React dashboard for centralized fleet management.",
+      tech: ["Flutter", "Kotlin", "Node.js", "PostgreSQL", "React"],
+      github: "https://github.com/becastellani/CorpSyncMDM",
+      deploy: null,
+      status: "Completed",
+      featured: false,
+      category: "Systems",
+    },
+    {
+      id: 6,
+      name: "RitmoApp",
+      description:
+        "Flutter app for remote productivity with voice recognition and artificial intelligence.",
+      longDescription:
+        "Productivity assistant for remote workers with voice recognition, local storage and AI for personalized focus, break and organization suggestions based on the user's routine.",
+      tech: ["Flutter", "Dart", "Firebase", "AI/ML"],
+      github: "https://github.com/becastellani/RitmoApp",
+      deploy: null,
+      status: "Completed",
+      featured: false,
+      category: "Productivity",
+    },
+    {
+      id: 7,
+      name: "RemoteMouse",
+      description:
+        "Flutter app for remote computer control via smartphone, with Python backend server.",
+      longDescription:
+        "Flutter mobile client communicating via Socket.IO with a Python server for remote computer control. Allows adjusting volume, moving the mouse, clicking and scrolling directly from your smartphone.",
+      tech: ["Flutter", "Dart", "Python", "Socket.IO"],
+      github: "https://github.com/becastellani/Flutter-RemoteMouse",
+      deploy: null,
+      status: "Completed",
+      featured: false,
+      category: "Automation",
+    },
+    {
+      id: 8,
+      name: "User Management API",
+      description:
+        "REST API for user and product management with authentication, built with Node.js, Express and MongoDB.",
+      longDescription:
+        "REST API with full CRUD operations for users and products, JWT authentication, data validation and modular Express structure. MongoDB database via Mongoose.",
+      tech: ["Node.js", "Express", "MongoDB", "JWT"],
+      github: "https://github.com/becastellani/UserManagementMongoDB",
+      deploy: null,
+      status: "Completed",
+      featured: false,
+      category: "Systems",
+    },
+    {
+      id: 9,
+      name: "Humidity Controller",
+      description:
+        "Embedded automatic humidity control system with Arduino, DHT11 sensor, LCD display and relay.",
+      longDescription:
+        "IoT system for ambient humidity monitoring and control. Reads DHT11 sensor data, displays on LCD and automatically triggers relay to turn humidifier on or off based on configurable threshold.",
+      tech: ["Arduino", "IoT", "C++", "DHT11", "LCD"],
+      github: "https://github.com/becastellani/UmidificadorAutomatico",
+      deploy: null,
+      status: "Completed",
+      featured: false,
+      category: "Systems",
     },
   ],
 
@@ -147,7 +280,11 @@ export const portfolioData = {
   ],
 
   certifications: [
-    { name: "Google Cloud Engineering Certification", issuer: "Google", year: "2025" },
+    {
+      name: "Google Cloud Engineering Certification",
+      issuer: "Google",
+      year: "2025",
+    },
     { name: "Laravel — Rocketseat", issuer: "Rocketseat", year: "2024" },
     { name: "PHP — Alura", issuer: "Alura", year: "2023" },
     { name: "Laravel e Symfony — Alura", issuer: "Alura", year: "2023" },
@@ -171,7 +308,7 @@ export const portfolioData = {
 
   hero: {
     statsYearsLabel: "years exp.",
-    statsProjectsLabel: "projects",
+    statsProjectsLabel: "hours of code",
     viewProjectsButton: "View Projects",
     resumeButton: "Resume",
   },
@@ -186,13 +323,44 @@ export const portfolioData = {
       { name: "English", level: "Advanced — B2" },
       { name: "Spanish", level: "Beginner — A1" },
     ],
-    softSkills: ["Problem Solving", "Systems Thinking", "Ownership", "Technical Communication", "Proactivity", "Technical Leadership"],
+    softSkills: [
+      "Problem Solving",
+      "Systems Thinking",
+      "Ownership",
+      "Technical Communication",
+      "Proactivity",
+      "Technical Leadership",
+    ],
     skillGroups: [
-      { label: "Backend", items: ["PHP", "Laravel", "Symfony", "Node.js", "NestJS", "Python", "Go", "TypeScript"] },
-      { label: "Frontend", items: ["React", "JavaScript", "HTML5", "CSS3", "Blade", "Twig"] },
-      { label: "Databases", items: ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "Redis"] },
-      { label: "Infrastructure", items: ["Kubernetes", "Docker", "RabbitMQ", "CI/CD", "Linux"] },
-      { label: "Tools", items: ["Git", "Selenium", "Puppeteer", "REST APIs", "WebScraping"] },
+      {
+        label: "Backend",
+        items: [
+          "PHP",
+          "Laravel",
+          "Symfony",
+          "Node.js",
+          "NestJS",
+          "Python",
+          "Go",
+          "TypeScript",
+        ],
+      },
+      {
+        label: "Frontend",
+        items: ["React", "JavaScript", "HTML5", "CSS3", "Blade", "Twig"],
+      },
+      {
+        label: "Databases",
+        items: ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "Redis"],
+      },
+      {
+        label: "Infrastructure",
+        items: ["Kubernetes", "Docker", "RabbitMQ", "CI/CD", "Linux"],
+      },
+      {
+        label: "Tools",
+        items: ["Git", "Selenium", "Puppeteer", "REST APIs", "WebScraping"],
+      },
     ],
     softSkillsLabel: "Soft skills",
     academicLabel: "Academic Involvement",
@@ -217,13 +385,15 @@ export const portfolioData = {
     sectionLabel: "Contact",
     sectionTitle: "Let's",
     sectionTitleAccent: "talk?",
-    tagline: "I'm open to conversations. If you have something interesting to discuss, send me a message.",
+    tagline:
+      "I'm open to conversations. If you have something interesting to discuss, send me a message.",
     emailLabel: "Email",
     phoneLabel: "Phone",
     locationLabel: "Location",
     footerText: "Built with React + Vite",
     formTitle: "Send a message",
-    formSubtitle: "I respond within 24h. It can be about job opportunities, technical collaborations or just a chat about technology.",
+    formSubtitle:
+      "I respond within 24h. It can be about job opportunities, technical collaborations or just a chat about technology.",
     formNameLabel: "Name",
     formNamePlaceholder: "Your name",
     formEmailLabel: "Email",
