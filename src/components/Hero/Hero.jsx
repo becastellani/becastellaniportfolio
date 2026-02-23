@@ -15,16 +15,16 @@ const fadeUp = {
   }),
 };
 
-function Stats({ className }) {
+function Stats({ className, data }) {
   return (
     <div className={className}>
       <div className={styles.stat}>
         <div className={styles.statNumber}>3<span>+</span></div>
-        <div className={styles.statLabel}>anos de exp.</div>
+        <div className={styles.statLabel}>{data.hero.statsYearsLabel}</div>
       </div>
       <div className={styles.stat}>
         <div className={styles.statNumber}>10<span>+</span></div>
-        <div className={styles.statLabel}>projetos</div>
+        <div className={styles.statLabel}>{data.hero.statsProjectsLabel}</div>
       </div>
     </div>
   );
@@ -141,14 +141,14 @@ export default function Hero({ data }) {
           custom={0.55}
         >
           <button className={styles.btnPrimary} onClick={scrollToProjects}>
-            Ver Projetos <ArrowRight size={16} />
+            {data.hero.viewProjectsButton} <ArrowRight size={16} />
           </button>
           <a
             href="/Bernardo_Mantoan_Castellani.pdf"
             download
             className={styles.btnSecondary}
           >
-            Currículo <Download size={16} />
+            {data.hero.resumeButton} <Download size={16} />
           </a>
         </motion.div>
 
@@ -159,7 +159,7 @@ export default function Hero({ data }) {
             animate="visible"
             custom={0.65}
           >
-            <Stats className={styles.stats} />
+            <Stats className={styles.stats} data={data} />
           </motion.div>
         )}
       </div>
@@ -171,7 +171,7 @@ export default function Hero({ data }) {
           animate="visible"
           custom={0.7}
         >
-          <Stats className={styles.stats} />
+          <Stats className={styles.stats} data={data} />
         </motion.div>
       )}
 

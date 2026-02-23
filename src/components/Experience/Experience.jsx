@@ -65,7 +65,7 @@ function ExperienceCard({ exp, index }) {
 }
 
 export default function Experience({ data }) {
-  const { experiences } = data;
+  const { experiences, experience } = data;
   const sectionRef = useRef(null);
   const inView = useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -78,7 +78,7 @@ export default function Experience({ data }) {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          Trajetória
+          {experience.sectionLabel}
         </motion.div>
         <motion.h2
           className="section-title"
@@ -86,7 +86,7 @@ export default function Experience({ data }) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Experiência <span className="accent">Profissional</span>
+          {experience.sectionTitle} <span className="accent">{experience.sectionTitleAccent}</span>
         </motion.h2>
       </div>
 

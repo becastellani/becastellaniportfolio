@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, forwardRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import styles from "./Projects.module.css";
@@ -11,9 +11,10 @@ const fadeUp = {
     scale: 1,
     transition: { duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] },
   }),
+  exit: { opacity: 0, y: 24, scale: 0.98, transition: { duration: 0.3 } },
 };
 
-function ProjectCard({ project, index }) {
+const ProjectCard = forwardRef(({ project, index, data }, externalRef) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -24,8 +25,8 @@ function ProjectCard({ project, index }) {
       variants={fadeUp}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
+      exit="exit"
       custom={index * 0.1}
-      layout
     >
       <div className={styles.cardTop}>
         <span className={styles.categoryBadge}>{project.category}</span>
@@ -59,7 +60,7 @@ function ProjectCard({ project, index }) {
             <Github size={14} /> GitHub
           </a>
         ) : (
-          <span className={styles.empty}>Privado / WIP</span>
+          <span className={styles.empty}>{data.projectsConfig.privateLabel}</span>
         )}
 
 
@@ -70,7 +71,7 @@ function ProjectCard({ project, index }) {
             rel="noreferrer"
             className={`${styles.actionBtn} ${styles.actionBtnPrimary}`}
           >
-            <ExternalLink size={14} /> Demo
+            <ExternalLink size={14} /> {data.projectsConfig.demoLabel}
           </a>
         ) : (
           <span className={styles.empty}></span>
@@ -78,20 +79,20 @@ function ProjectCard({ project, index }) {
       </div>
     </motion.div>
   );
-}
+});
 
-const CATEGORIES = ["Todos", "SaaS", "Sistemas", "Automação", "Produtividade"];
+ProjectCard.displayName = "ProjectCard";
 
 export default function Projects({ data }) {
-  const { projects } = data;
-  const [filter, setFilter] = useState("Todos");
+  const { projects, projectsConfig } = data;
+  const [filterIndex, setFilterIndex] = useState(0);
   const sectionRef = useRef(null);
-  const inView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const inView = useInView(sectionRef, { once: true, margin: "-80px" });
 
   const filtered =
-    filter === "Todos"
+    filterIndex === 0
       ? projects
-      : projects.filter((p) => p.category === filter);
+      : projects.filter((p) => p.category === projectsConfig.categories[filterIndex]);
 
   return (
     <section id="projects" className={`section ${styles.projects}`} ref={sectionRef}>
@@ -102,7 +103,7 @@ export default function Projects({ data }) {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          Portfólio
+          {projectsConfig.sectionLabel}
         </motion.div>
         <motion.h2
           className="section-title"
@@ -110,7 +111,7 @@ export default function Projects({ data }) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Projetos
+          {projectsConfig.sectionTitle}
         </motion.h2>
       </div>
 
@@ -120,24 +121,24 @@ export default function Projects({ data }) {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        {CATEGORIES.map((cat) => (
+        {projectsConfig.categories.map((cat, idx) => (
           <button
             key={cat}
-            className={`${styles.filterBtn} ${filter === cat ? styles.active : ""}`}
-            onClick={() => setFilter(cat)}
+            className={`${styles.filterBtn} ${filterIndex === idx ? styles.active : ""}`}
+            onClick={() => setFilterIndex(idx)}
           >
             {cat}
           </button>
         ))}
       </motion.div>
 
-      <motion.div className={styles.grid} layout>
-        <AnimatePresence mode="popLayout">
+      <div className={styles.grid}>
+        <AnimatePresence mode="wait">
           {filtered.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+            <ProjectCard key={`${project.id}-${filterIndex}`} project={project} index={i} data={data} />
           ))}
         </AnimatePresence>
-      </motion.div>
+      </div>
     </section>
   );
 }

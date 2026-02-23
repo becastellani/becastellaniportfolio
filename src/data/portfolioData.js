@@ -4,6 +4,7 @@ export const portfolioData = {
     lastName: "Castellani",
     fullName: "Bernardo Castellani",
     role: "Full Stack Developer",
+    brandRole: "Full Stack Dev",
     tagline: "Sistemas financeiros de alta escala. Arquitetura que sobrevive à produção.",
     description:
       "Desenvolvedor Full Stack com foco em sistemas críticos, microsserviços e infraestrutura. Transformo requisitos complexos em código confiável, de queries otimizadas a pipelines orquestrados em Kubernetes.",
@@ -183,4 +184,106 @@ export const portfolioData = {
     "Diretor de Pesquisa — Liga Acadêmica de Engenharia de Software e ADS, Biopark (2024–2025)",
     "Monitor de Abstração, Modelagem e Persistência de Dados — Biopark (2023–2024)",
   ],
+
+  navigation: {
+    home: "Home",
+    about: "Sobre",
+    experience: "Experiências",
+    projects: "Projetos",
+    contact: "Contato",
+    navigationLabel: "Navegação",
+    terminal: "Terminal",
+    theme: {
+      dark: "Dark",
+      light: "Light",
+    },
+  },
+
+  hero: {
+    statsYearsLabel: "anos de exp.",
+    statsProjectsLabel: "projetos",
+    viewProjectsButton: "Ver Projetos",
+    resumeButton: "Currículo",
+  },
+
+  about: {
+    sectionLabel: "Sobre mim",
+    sectionTitle: "Desenvolvedor Full-Stack com",
+    sectionTitleAccent: "viés de infraestrutura",
+    bio: "Sou desenvolvedor Full Stack focado em sistemas críticos. Atualmente atuo no Sicredi Vale do Piquiri Abcd PR/SP, onde trabalho no principlamente sistema da cooperativa. Antes disso, passei dois anos modernizando um ERP legado em PHP — automatizando fluxos e otimizando performance em produção.",
+    languages: [
+      { name: "Português", level: "Nativo" },
+      { name: "Inglês", level: "Avançado — B2" },
+      { name: "Espanhol", level: "Iniciante — A1" },
+    ],
+    softSkills: [
+      "Resolução de Problemas",
+      "Pensamento Sistêmico",
+      "Ownership",
+      "Comunicação Técnica",
+      "Proatividade",
+      "Liderança Técnica",
+    ],
+    skillGroups: [
+      {
+        label: "Backend",
+        items: ["PHP", "Laravel", "Symfony", "Node.js", "NestJS", "Python", "Go", "TypeScript"],
+      },
+      {
+        label: "Frontend",
+        items: ["React", "JavaScript", "HTML5", "CSS3", "Blade", "Twig"],
+      },
+      {
+        label: "Banco de Dados",
+        items: ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "Redis"],
+      },
+      {
+        label: "Infraestrutura",
+        items: ["Kubernetes", "Docker", "RabbitMQ", "CI/CD", "Linux"],
+      },
+      {
+        label: "Ferramentas",
+        items: ["Git", "Selenium", "Puppeteer", "REST APIs", "WebScraping"],
+      },
+    ],
+    softSkillsLabel: "Soft skills",
+    academicLabel: "Atuação Acadêmica",
+    certificationsLabel: "Certificações",
+  },
+
+  experience: {
+    sectionLabel: "Trajetória",
+    sectionTitle: "Experiência",
+    sectionTitleAccent: "Profissional",
+  },
+
+  projectsConfig: {
+    sectionLabel: "Portfólio",
+    sectionTitle: "Projetos",
+    categories: ["Todos", "SaaS", "Sistemas", "Automação", "Produtividade"],
+    privateLabel: "Privado / WIP",
+    demoLabel: "Demo",
+  },
+
+  contact: {
+    sectionLabel: "Contato",
+    sectionTitle: "Vamos",
+    sectionTitleAccent: "conversar?",
+    tagline: "Estou aberto a conversas. Se você tem algo interessante para discutir, me manda uma mensagem.",
+    emailLabel: "Email",
+    phoneLabel: "Telefone",
+    locationLabel: "Localização",
+    footerText: "Construído com React + Vite",
+    formTitle: "Envie uma mensagem",
+    formSubtitle: "Respondo em até 24h. Pode ser sobre oportunidades de trabalho, colaborações técnicas ou apenas um papo sobre tecnologia.",
+    formNameLabel: "Nome",
+    formNamePlaceholder: "Seu nome",
+    formEmailLabel: "Email",
+    formEmailPlaceholder: "seu@email.com",
+    formMessageLabel: "Mensagem",
+    formMessagePlaceholder: "Sobre o que quer conversar?",
+    formSubmitButton: "Enviar mensagem",
+    formSubmitting: "Abrindo cliente de email...",
+    emailSubject: "Contato via portfólio",
+  },
 };

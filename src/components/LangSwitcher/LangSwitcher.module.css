@@ -1,0 +1,127 @@
+.wrapper {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 150;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  white-space: nowrap;
+}
+
+.trigger:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.trigger:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.loading {
+  border-color: var(--border-accent);
+}
+
+.spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--border-hover);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.currentLang {
+  letter-spacing: 0.3px;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  min-width: 150px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+
+.option:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.option.active {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.flag {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.langName {
+  flex: 1;
+}
+
+.check {
+  color: var(--accent);
+  font-size: 11px;
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    top: 16px;
+    right: 16px;
+  }
+
+  .trigger {
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .dropdown {
+    right: 0;
+  }
+}

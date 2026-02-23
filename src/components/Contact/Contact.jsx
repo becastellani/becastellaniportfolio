@@ -13,7 +13,7 @@ const fadeUp = {
 };
 
 export default function Contact({ data }) {
-  const { personal } = data;
+  const { personal, contact } = data;
   const sectionRef = useRef(null);
   const inView = useInView(sectionRef, { once: true, margin: "-100px" });
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -26,8 +26,8 @@ export default function Contact({ data }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, message } = formData;
-    const mailto = `mailto:${personal.email}?subject=Contato via portfólio — ${name}&body=${encodeURIComponent(
-      `Nome: ${name}\nEmail: ${email}\n\n${message}`
+    const mailto = `mailto:${personal.email}?subject=${contact.emailSubject} — ${name}&body=${encodeURIComponent(
+      `${contact.formNameLabel}: ${name}\n${contact.formEmailLabel}: ${email}\n\n${message}`
     )}`;
     window.location.href = mailto;
     setSubmitted(true);
@@ -43,7 +43,7 @@ export default function Contact({ data }) {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          Contato
+          {contact.sectionLabel}
         </motion.div>
         <motion.h2
           className="section-title"
@@ -51,7 +51,7 @@ export default function Contact({ data }) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Vamos <span className="accent">conversar?</span>
+          {contact.sectionTitle} <span className="accent">{contact.sectionTitleAccent}</span>
         </motion.h2>
       </div>
 
@@ -64,8 +64,7 @@ export default function Contact({ data }) {
           custom={0.2}
         >
           <p className={styles.tagline}>
-            Estou aberto a novas oportunidades, projetos freelance e conversas técnicas.
-            Se você tem algo interessante para discutir, me manda uma mensagem.
+            {contact.tagline}
           </p>
 
           <div className={styles.contactItems}>
@@ -75,7 +74,7 @@ export default function Contact({ data }) {
             >
               <div className={styles.contactIcon}><Mail size={17} /></div>
               <div>
-                <div className={styles.contactLabel}>Email</div>
+                <div className={styles.contactLabel}>{contact.emailLabel}</div>
                 <div className={styles.contactValue}>{personal.email}</div>
               </div>
             </a>
@@ -86,7 +85,7 @@ export default function Contact({ data }) {
             >
               <div className={styles.contactIcon}><Phone size={17} /></div>
               <div>
-                <div className={styles.contactLabel}>Telefone</div>
+                <div className={styles.contactLabel}>{contact.phoneLabel}</div>
                 <div className={styles.contactValue}>{personal.phone}</div>
               </div>
             </a>
@@ -94,7 +93,7 @@ export default function Contact({ data }) {
             <div className={styles.contactItem} style={{ cursor: "default" }}>
               <div className={styles.contactIcon}><MapPin size={17} /></div>
               <div>
-                <div className={styles.contactLabel}>Localização</div>
+                <div className={styles.contactLabel}>{contact.locationLabel}</div>
                 <div className={styles.contactValue}>{personal.location}</div>
               </div>
             </div>
@@ -128,43 +127,42 @@ export default function Contact({ data }) {
           custom={0.35}
         >
           <div className={styles.ctaCard}>
-            <div className={styles.ctaTitle}>Envie uma mensagem</div>
+            <div className={styles.ctaTitle}>{contact.formTitle}</div>
             <p className={styles.ctaSubtitle}>
-              Respondo em até 24h. Pode ser sobre oportunidades de trabalho,
-              colaborações técnicas ou apenas um papo sobre tecnologia.
+              {contact.formSubtitle}
             </p>
 
             <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.field}>
-                <label className={styles.fieldLabel}>Nome</label>
+                <label className={styles.fieldLabel}>{contact.formNameLabel}</label>
                 <input
                   className={styles.input}
                   name="name"
                   type="text"
-                  placeholder="Seu nome"
+                  placeholder={contact.formNamePlaceholder}
                   value={formData.name}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className={styles.field}>
-                <label className={styles.fieldLabel}>Email</label>
+                <label className={styles.fieldLabel}>{contact.formEmailLabel}</label>
                 <input
                   className={styles.input}
                   name="email"
                   type="email"
-                  placeholder="seu@email.com"
+                  placeholder={contact.formEmailPlaceholder}
                   value={formData.email}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className={styles.field}>
-                <label className={styles.fieldLabel}>Mensagem</label>
+                <label className={styles.fieldLabel}>{contact.formMessageLabel}</label>
                 <textarea
                   className={styles.textarea}
                   name="message"
-                  placeholder="Sobre o que quer conversar?"
+                  placeholder={contact.formMessagePlaceholder}
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -172,8 +170,8 @@ export default function Contact({ data }) {
                 />
               </div>
               <button className={styles.submitBtn} type="submit">
-                {submitted ? "Abrindo cliente de email..." : (
-                  <><Send size={16} /> Enviar mensagem</>
+                {submitted ? contact.formSubmitting : (
+                  <><Send size={16} /> {contact.formSubmitButton}</>
                 )}
               </button>
             </form>
@@ -185,7 +183,7 @@ export default function Contact({ data }) {
         <div className={styles.footerBrand}>
           Bernardo <span>Castellani</span>
         </div>
-        <div>© {new Date().getFullYear()} · Construído com React + Vite</div>
+        <div>© {new Date().getFullYear()} · {contact.footerText}</div>
         <div>{personal.location}</div>
       </div>
     </section>

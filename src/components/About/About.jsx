@@ -3,15 +3,6 @@ import { motion, useInView } from "framer-motion";
 import { MapPin, Mail, Award, BookOpen, Trophy } from "lucide-react";
 import styles from "./About.module.css";
 
-const SOFT_SKILLS = [
-  "Resolução de Problemas",
-  "Pensamento Sistêmico",
-  "Ownership",
-  "Comunicação Técnica",
-  "Proatividade",
-  "Liderança Técnica",
-];
-
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (i = 0) => ({
@@ -21,31 +12,8 @@ const fadeUp = {
   }),
 };
 
-const SKILL_GROUPS = [
-  {
-    label: "Backend",
-    items: ["PHP", "Laravel", "Symfony", "Node.js", "NestJS", "Python", "Go", "TypeScript"],
-  },
-  {
-    label: "Frontend",
-    items: ["React", "JavaScript", "HTML5", "CSS3", "Blade", "Twig"],
-  },
-  {
-    label: "Banco de Dados",
-    items: ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "Redis"],
-  },
-  {
-    label: "Infraestrutura",
-    items: ["Kubernetes", "Docker", "RabbitMQ", "CI/CD", "Linux"],
-  },
-  {
-    label: "Ferramentas",
-    items: ["Git", "Selenium", "Puppeteer", "REST APIs", "WebScraping"],
-  },
-];
-
 export default function About({ data }) {
-  const { personal, certifications, achievements } = data;
+  const { personal, certifications, achievements, about } = data;
   const sectionRef = useRef(null);
   const inView = useInView(sectionRef, { once: true, margin: "-80px" });
 
@@ -58,7 +26,7 @@ export default function About({ data }) {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          Sobre mim
+          {about.sectionLabel}
         </motion.div>
         <motion.h2
           className="section-title"
@@ -66,8 +34,8 @@ export default function About({ data }) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Desenvolvedor Full-Stack com {" "}
-          <span className="accent">viés de infraestrutura</span>
+          {about.sectionTitle}{" "}
+          <span className="accent">{about.sectionTitleAccent}</span>
         </motion.h2>
       </div>
 
@@ -80,11 +48,7 @@ export default function About({ data }) {
             animate={inView ? "visible" : "hidden"}
             custom={0.2}
           >
-            Sou desenvolvedor Full Stack focado em sistemas críticos. Atualmente
-            atuo no <strong>Sicredi Vale do Piquiri Abcd PR/SP</strong>, onde trabalho no principlamente sistema da cooperativa. 
-            Antes disso, passei dois anos modernizando um ERP
-            legado em PHP — automatizando fluxos e otimizando performance em
-            produção.
+            {about.bio}
           </motion.p>
 
           <motion.div
@@ -94,21 +58,13 @@ export default function About({ data }) {
             animate={inView ? "visible" : "hidden"}
             custom={0.35}
           >
-            <div className={styles.infoItem}>
-              <Award size={15} className={styles.infoIcon} />
-              <span className={styles.infoLabel}>Português</span>
-              <span className={styles.infoValue}>Nativo</span>
-            </div>
-            <div className={styles.infoItem}>
-              <Award size={15} className={styles.infoIcon} />
-              <span className={styles.infoLabel}>Inglês</span>
-              <span className={styles.infoValue}>Avançado — B2</span>
-            </div>
-            <div className={styles.infoItem}>
-              <Award size={15} className={styles.infoIcon} />
-              <span className={styles.infoLabel}>Espanhol</span>
-              <span className={styles.infoValue}>Iniciante — A1</span>
-            </div>
+            {about.languages.map((lang) => (
+              <div key={lang.name} className={styles.infoItem}>
+                <Award size={15} className={styles.infoIcon} />
+                <span className={styles.infoLabel}>{lang.name}</span>
+                <span className={styles.infoValue}>{lang.level}</span>
+              </div>
+            ))}
           </motion.div>
 
           <motion.div
@@ -117,9 +73,9 @@ export default function About({ data }) {
             animate={inView ? "visible" : "hidden"}
             custom={0.42}
           >
-            <div className={styles.groupLabel}>Soft skills</div>
+            <div className={styles.groupLabel}>{about.softSkillsLabel}</div>
             <div className={styles.tagCloud}>
-              {SOFT_SKILLS.map((s) => (
+              {about.softSkills.map((s) => (
                 <span key={s} className="tag">{s}</span>
               ))}
             </div>
@@ -134,7 +90,7 @@ export default function About({ data }) {
           >
             <div className={styles.boxHeader}>
               <Trophy size={14} className={styles.infoIcon} />
-              <span className={styles.groupLabel} style={{ margin: 0 }}>Atuação Acadêmica</span>
+              <span className={styles.groupLabel} style={{ margin: 0 }}>{about.academicLabel}</span>
             </div>
             <ul className={styles.achievementsList}>
               {achievements.map((a) => (
@@ -145,7 +101,7 @@ export default function About({ data }) {
         </div>
 
         <div className={styles.right}>
-          {SKILL_GROUPS.map((group, gi) => (
+          {about.skillGroups.map((group, gi) => (
             <motion.div
               key={group.label}
               className={styles.skillGroup}
@@ -172,7 +128,7 @@ export default function About({ data }) {
           >
             <div className={styles.boxHeader}>
               <BookOpen size={14} className={styles.infoIcon} />
-              <span className={styles.groupLabel} style={{ margin: 0 }}>Certificações</span>
+              <span className={styles.groupLabel} style={{ margin: 0 }}>{about.certificationsLabel}</span>
             </div>
             <div className={styles.certsList}>
               {certifications.map((cert) => (
