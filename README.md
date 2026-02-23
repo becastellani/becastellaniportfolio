@@ -4,9 +4,9 @@ Portfólio profissional construído com React + Vite, Framer Motion e CSS Module
 
 ## Stack
 - React 18 + Vite
-- Framer Motion (animações)
-- @tsparticles/react (hero particles)
-- CSS Modules (zero CSS global bagunçado)
+- Framer Motion
+- @tsparticles/react
+- CSS Modules
 - lucide-react (ícones)
 
 ## Como rodar
