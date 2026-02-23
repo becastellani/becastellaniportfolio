@@ -1,0 +1,186 @@
+export const portfolioData = {
+  personal: {
+    name: "Bernardo",
+    lastName: "Castellani",
+    fullName: "Bernardo Castellani",
+    role: "Full Stack Developer",
+    tagline: "Sistemas financeiros de alta escala. Arquitetura que sobrevive à produção.",
+    description:
+      "Desenvolvedor Full Stack com foco em sistemas críticos, microsserviços e infraestrutura. Transformo requisitos complexos em código confiável, de queries otimizadas a pipelines orquestrados em Kubernetes.",
+    location: "Toledo — Paraná, Brasil",
+    email: "becastellani10@gmail.com",
+    phone: "+55 19 99905-0946",
+    avatarInitials: "BC",
+    social: {
+      github: "https://github.com/becastellani",
+      linkedin: "https://www.linkedin.com/in/bernardo-castellani-b515a0203/",
+      discord: "#",
+    },
+  },
+
+  skills: {
+    backend: [
+      { name: "PHP (Laravel/Symfony)"},
+      { name: "Node.js (NestJS)"},
+      { name: "Python"},
+      { name: "Go"},
+      { name: "TypeScript"},
+    ],
+    frontend: [
+      { name: "React"},
+      { name: "JavaScript"},
+      { name: "HTML5 / CSS3"},
+    ],
+    infra: [
+      { name: "Kubernetes"},
+      { name: "Docker"},
+      { name: "RabbitMQ"},
+      { name: "Redis"},
+      { name: "CI/CD"},
+    ],
+    databases: [
+      "PostgreSQL",
+      "SQL Server",
+      "MySQL",
+      "Oracle",
+      "MongoDB",
+    ],
+    tags: [
+      "PHP", "Laravel", "Symfony", "Node.js", "NestJS", "TypeScript", "Python", "Go",
+      "React", "Kubernetes", "Docker", "RabbitMQ", "Redis", "MySQL", "PostgreSQL",
+      "REST APIs", "Microsserviços", "CI/CD", "Linux", "Git", "WebScraping",
+    ],
+  },
+
+  experiences: [
+    {
+      id: 1,
+      company: "Sicredi Vale do Piquiri",
+      role: "Desenvolvedor Full Stack",
+      period: "Jul 2025 — Presente",
+      location: "Palotina — PR",
+      type: "Cooperativa de Crédito",
+      current: true,
+      highlights: [
+        "Desenvolvimento e manutenção do sistema satélite da cooperativa — cobrança e negociação de dívidas em produção",
+        "Integrações via APIs RESTful com core bancário e bureaus de crédito, garantindo sincronização e conformidade regulatória",
+        "Manutenção de microsserviços PHP orquestrados em Kubernetes, com foco em disponibilidade e observabilidade",
+        "Troubleshooting de produção: otimização de queries SQL Server/PostgreSQL e análise de performance em endpoints críticos",
+        "ETLs pontuais com Python/Pandas para migração e reconciliação financeira",
+      ],
+      tech: ["PHP", "Kubernetes", "PostgreSQL", "SQL Server", "Python", "Pandas", "REST APIs"],
+    },
+    {
+      id: 2,
+      company: "Alow Gestão e Telefonia",
+      role: "Desenvolvedor Full Stack",
+      period: "Ago 2023 — Jun 2025",
+      location: "Toledo — PR (Remoto)",
+      type: "ERP / Telecom",
+      current: false,
+      highlights: [
+        "Refatoração de módulos legados de ERP em PHP (Laravel/Symfony), modernizando padrões e eliminando dependências deprecadas",
+        "Otimização de APIs críticas com cache distribuído Redis e reestruturação de queries — redução de 30% no tempo de resposta",
+        "Automações com Puppeteer/Selenium para integração com sistemas sem API, eliminando ~20h semanais de trabalho manual",
+        "Implementação de filas RabbitMQ para processamentos assíncronos: boletos, e-mails e sincronização de dados",
+        "Troubleshooting de produção: análise de deadlocks MySQL, otimização de jobs agendados e investigação de falhas de integração",
+      ],
+      tech: ["PHP", "Laravel", "Symfony", "Redis", "RabbitMQ", "Puppeteer", "Selenium", "MySQL"],
+    },
+    {
+      id: 3,
+      company: "Alow Gestão e Telefonia",
+      role: "Suporte Técnico N2/N3",
+      period: "Mai 2023 — Jul 2023",
+      location: "Toledo — PR",
+      type: "Suporte / Banco de Dados",
+      current: false,
+      highlights: [
+        "Suporte N2/N3 para incidentes de aplicação e banco de dados em produção",
+        "Otimização de queries MySQL em relatórios gerenciais — redução de 35% via índices e reestruturação de JOINs",
+        "Automação de verificações de sistema com Python/Selenium",
+      ],
+      tech: ["MySQL", "Python", "Selenium"],
+    },
+  ],
+
+  projects: [
+    // {
+    //   id: 1,
+    //   name: "Veracy",
+    //   description:
+    //     "Plataforma SaaS de analytics para influenciadores digitais. Scraping de dados do Instagram via Apify, métricas de engajamento e relatórios estratégicos para criadores de conteúdo.",
+    //   longDescription:
+    //     "Plataforma completa de inteligência para redes sociais, com pipeline de coleta de dados, processamento assíncrono e dashboard analítico em tempo real.",
+    //   tech: ["Laravel", "Apify", "MySQL", "Queue Jobs", "React", "TypeScript"],
+    //   github: "#",
+    //   deploy: null,
+    //   status: "Em desenvolvimento",
+    //   featured: true,
+    //   category: "SaaS",
+    // },
+    {
+      id: 1,
+      name: "FD SmartCheck",
+      description:
+        "Sistema acadêmico de check-in por QR Code com validação por geolocalização. Segurança via HMAC-SHA256 e proteção anti-replay em tempo real.",
+      longDescription:
+        "Arquitetura de segurança em camadas para controle de presença acadêmica, com assinaturas criptográficas, validação geoespacial e dashboard em tempo real.",
+      tech: ["Node.js", "React", "PostgreSQL", "HMAC-SHA256", "Geolocation API"],
+      github: null,
+      deploy: null,
+      status: "Em Andamento",
+      featured: true,
+      category: "Sistemas",
+    },
+    {
+      id: 2,
+      name: "ActionPlanner",
+      description:
+        "Sistema de gestão de tarefas com dashboard profissional, CRUD completo e autenticação. Frontend em Angular, backend em Node.js.",
+      longDescription:
+        "Task management com hierarquia de projetos, atribuição de times, tracking de progresso e relatórios exportáveis.",
+      tech: ["Angular", "Node.js", "TypeScript", "PostgreSQL", "JWT"],
+      github: "https://github.com/becastellani/ActionPlanner",
+      deploy: null,
+      status: "Concluído",
+      featured: false,
+      category: "Produtividade",
+    },
+    {
+      id: 3,
+      name: "Price Tracker",
+      description:
+        "Sistema de rastreamento de preços com web scraping concorrente em Go. Monitora produtos em múltiplos e-commerces simultaneamente com alertas configuráveis.",
+      longDescription:
+        "Scraping paralelo utilizando goroutines, armazenamento de histórico de preços, sistema de alertas e API REST para consumo externo.",
+      tech: ["Go", "Goroutines", "PostgreSQL", "REST API", "Cron Jobs"],
+      github: "https://github.com/becastellani/go-price-tracker",
+      deploy: null,
+      status: "Concluído",
+      featured: false,
+      category: "Automação",
+    },
+  ],
+
+  education: [
+    {
+      institution: "Biopark Educação",
+      degree: "Bacharelado em Engenharia de Software",
+      period: "2023 — 2026",
+      highlight: "TCC: Machine Learning para Prevenção de Fraudes em Cooperativas de Crédito",
+    },
+  ],
+
+  certifications: [
+    { name: "Google Cloud Engineering Certification", issuer: "Google", year: "2025" },
+    { name: "Laravel — Rocketseat", issuer: "Rocketseat", year: "2024" },
+    { name: "PHP — Alura", issuer: "Alura", year: "2023" },
+    { name: "Laravel e Symfony — Alura", issuer: "Alura", year: "2023" },
+  ],
+
+  achievements: [
+    "Diretor de Pesquisa — Liga Acadêmica de Engenharia de Software e ADS, Biopark (2024–2025)",
+    "Monitor de Abstração, Modelagem e Persistência de Dados — Biopark (2023–2024)",
+  ],
+};
