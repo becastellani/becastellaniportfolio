@@ -169,7 +169,7 @@ export const portfolioData = {
       institution: "Biopark Educação",
       degree: "Bacharelado em Engenharia de Software",
       period: "2023 — 2026",
-      highlight: "TCC: Machine Learning para Prevenção de Fraudes em Cooperativas de Crédito",
+      highlight: "",
     },
   ],
 

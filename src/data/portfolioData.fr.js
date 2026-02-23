@@ -142,7 +142,7 @@ export const portfolioData = {
       institution: "Biopark Educação",
       degree: "Licence en Génie Logiciel",
       period: "2023 — 2026",
-      highlight: "TFE : Machine Learning pour la Prévention des Fraudes dans les Coopératives de Crédit",
+      highlight: "",
     },
   ],
 

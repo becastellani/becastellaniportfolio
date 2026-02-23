@@ -142,7 +142,7 @@ export const portfolioData = {
       institution: "Biopark Educação",
       degree: "Bachelor's in Software Engineering",
       period: "2023 — 2026",
-      highlight: "Thesis: Machine Learning for Fraud Prevention in Credit Cooperatives",
+      highlight: "",
     },
   ],
 
