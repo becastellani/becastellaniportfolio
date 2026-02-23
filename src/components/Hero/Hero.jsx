@@ -144,7 +144,7 @@ export default function Hero({ data }) {
             {data.hero.viewProjectsButton} <ArrowRight size={16} />
           </button>
           <a
-            href="/Bernardo_Mantoan_Castellani.pdf"
+            href="/public/Bernardo Mantoan CastellaniUS.pdf"
             download
             className={styles.btnSecondary}
           >
