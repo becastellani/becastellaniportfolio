@@ -23,7 +23,7 @@ function Stats({ className, data }) {
         <div className={styles.statLabel}>{data.hero.statsYearsLabel}</div>
       </div>
       <div className={styles.stat}>
-        <div className={styles.statNumber}>10<span>+</span></div>
+        <div className={styles.statNumber}>20<span>+</span></div>
         <div className={styles.statLabel}>{data.hero.statsProjectsLabel}</div>
       </div>
     </div>
