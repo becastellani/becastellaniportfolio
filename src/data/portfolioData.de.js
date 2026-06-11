@@ -23,6 +23,7 @@ export const portfolioData = {
   skills: {
     backend: [
       { name: "PHP (Laravel/Symfony)" },
+      { name: "Java 21" },
       { name: "Node.js (NestJS)" },
       { name: "Python" },
       { name: "Go" },
@@ -35,16 +36,19 @@ export const portfolioData = {
     ],
     infra: [
       { name: "Kubernetes" },
+      { name: "Kafka" },
       { name: "Docker" },
       { name: "RabbitMQ" },
       { name: "Redis" },
       { name: "CI/CD" },
+      { name: "SonarQube" },
     ],
     databases: ["PostgreSQL", "SQL Server", "MySQL", "Oracle", "MongoDB"],
     tags: [
       "PHP",
       "Laravel",
       "Symfony",
+      "Java 21",
       "Node.js",
       "NestJS",
       "TypeScript",
@@ -52,6 +56,7 @@ export const portfolioData = {
       "Go",
       "React",
       "Kubernetes",
+      "Kafka",
       "Docker",
       "RabbitMQ",
       "Redis",
@@ -60,6 +65,7 @@ export const portfolioData = {
       "REST APIs",
       "Microservices",
       "CI/CD",
+      "SonarQube",
       "Linux",
       "Git",
       "WebScraping",
@@ -76,17 +82,20 @@ export const portfolioData = {
       type: "Kreditgenossenschaft",
       current: true,
       highlights: [
-        "Entwicklung und Wartung des Satellitensystems der Genossenschaft — Schuldeninkasso und -verhandlung in Produktion",
-        "RESTful API-Integrationen mit Banking-Core und Kreditbüros, die Synchronisation und regulatorische Compliance sicherstellen",
-        "Wartung von PHP-Microservices, orchestriert in Kubernetes, mit Fokus auf Verfügbarkeit und Observability",
-        "Produktions-Troubleshooting: SQL Server/PostgreSQL Query-Optimierung und Performance-Analyse kritischer Endpoints",
-        "Ad-hoc ETLs mit Python/Pandas für Finanzmigration und -abstimmung",
+        "Mitarbeit am CAS-Kokreationsprojekt (PJ-Kontoeröffnung) mit Java 21, Redis und Kubernetes auf nationaler Ebene",
+        "Aufbau von CI/CD-Pipelines mit Quality Gates (SonarQube, Lint, automatisierte Tests), standardisierter Build und Deploy für mehrere Microservices",
+        "Entwicklung und Wartung des Satellitensystems der Genossenschaft (PHP), mit Modulen für Kreditanträge, Angebote, Inkasso und Schuldenverhandlung",
+        "RESTful API-Integrationen mit Banking-Core und Kreditbüros, die Datensynchronisation und regulatorische Compliance sicherstellen",
+        "Produktions-Troubleshooting: SQL Server/PostgreSQL Query-Optimierung, Performance-Analyse kritischer Endpoints und ETLs mit Python/Pandas für Finanzabstimmung",
       ],
       tech: [
+        "Java 21",
         "PHP",
         "Kubernetes",
+        "Redis",
         "PostgreSQL",
         "SQL Server",
+        "SonarQube",
         "Python",
         "Pandas",
         "REST APIs",
@@ -272,6 +281,12 @@ export const portfolioData = {
 
   education: [
     {
+      institution: "Faculdade Donaduzzi",
+      degree: "Postgraduiertenstudium in Intelligenten Systemen (KI, IoT und Software-Modernisierung)",
+      period: "In Bearbeitung",
+      highlight: "",
+    },
+    {
       institution: "Biopark Educação",
       degree: "Bachelor in Software Engineering",
       period: "2023 — 2026",
@@ -281,13 +296,11 @@ export const portfolioData = {
 
   certifications: [
     {
-      name: "Google Cloud Engineering Certification",
+      name: "Google Cloud Associate Cloud Engineer",
       issuer: "Google",
-      year: "2025",
+      year: "In Bearbeitung (Voraussichtl. 2026)",
     },
     { name: "Laravel — Rocketseat", issuer: "Rocketseat", year: "2024" },
-    { name: "PHP — Alura", issuer: "Alura", year: "2023" },
-    { name: "Laravel e Symfony — Alura", issuer: "Alura", year: "2023" },
   ],
 
   achievements: [
@@ -317,7 +330,7 @@ export const portfolioData = {
     sectionLabel: "Über mich",
     sectionTitle: "Full-Stack Entwickler mit",
     sectionTitleAccent: "Infrastruktur-Fokus",
-    bio: "Ich bin Full-Stack-Entwickler mit Fokus auf kritische Systeme. Derzeit arbeite ich bei Sicredi Vale do Piquiri, wo ich am Hauptsystem der Genossenschaft arbeite. Davor habe ich zwei Jahre damit verbracht, ein Legacy-ERP in PHP zu modernisieren — Workflows zu automatisieren und die Produktionsleistung zu optimieren.",
+    bio: "Ich bin Full-Stack-Entwickler mit Fokus auf kritische Systeme. Derzeit arbeite ich bei Sicredi Vale do Piquiri am CAS-Kokreationsprojekt (PJ-Kontoeröffnung) mit Java 21 und Kubernetes. Davor habe ich fast zwei Jahre damit verbracht, ein Legacy-ERP in PHP zu modernisieren — Workflows zu automatisieren und die Produktionsleistung zu optimieren.",
     languages: [
       { name: "Portugiesisch", level: "Muttersprache" },
       { name: "Englisch", level: "Fortgeschritten — B2" },
@@ -338,6 +351,7 @@ export const portfolioData = {
           "PHP",
           "Laravel",
           "Symfony",
+          "Java 21",
           "Node.js",
           "NestJS",
           "Python",
@@ -355,7 +369,7 @@ export const portfolioData = {
       },
       {
         label: "Infrastruktur",
-        items: ["Kubernetes", "Docker", "RabbitMQ", "CI/CD", "Linux"],
+        items: ["Kubernetes", "Kafka", "Docker", "RabbitMQ", "CI/CD", "SonarQube", "Linux"],
       },
       {
         label: "Werkzeuge",

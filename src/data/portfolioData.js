@@ -23,6 +23,7 @@ export const portfolioData = {
   skills: {
     backend: [
       { name: "PHP (Laravel/Symfony)" },
+      { name: "Java 21" },
       { name: "Node.js (NestJS)" },
       { name: "Python" },
       { name: "Go" },
@@ -35,16 +36,19 @@ export const portfolioData = {
     ],
     infra: [
       { name: "Kubernetes" },
+      { name: "Kafka" },
       { name: "Docker" },
       { name: "RabbitMQ" },
       { name: "Redis" },
       { name: "CI/CD" },
+      { name: "SonarQube" },
     ],
     databases: ["PostgreSQL", "SQL Server", "MySQL", "Oracle", "MongoDB"],
     tags: [
       "PHP",
       "Laravel",
       "Symfony",
+      "Java 21",
       "Node.js",
       "NestJS",
       "TypeScript",
@@ -52,6 +56,7 @@ export const portfolioData = {
       "Go",
       "React",
       "Kubernetes",
+      "Kafka",
       "Docker",
       "RabbitMQ",
       "Redis",
@@ -60,6 +65,7 @@ export const portfolioData = {
       "REST APIs",
       "Microsserviços",
       "CI/CD",
+      "SonarQube",
       "Linux",
       "Git",
       "WebScraping",
@@ -76,17 +82,20 @@ export const portfolioData = {
       type: "Cooperativa de Crédito",
       current: true,
       highlights: [
-        "Desenvolvimento e manutenção do sistema satélite da cooperativa — cobrança e negociação de dívidas em produção",
-        "Integrações via APIs RESTful com core bancário e bureaus de crédito, garantindo sincronização e conformidade regulatória",
-        "Manutenção de microsserviços PHP orquestrados em Kubernetes, com foco em disponibilidade e observabilidade",
-        "Troubleshooting de produção: otimização de queries SQL Server/PostgreSQL e análise de performance em endpoints críticos",
-        "ETLs pontuais com Python/Pandas para migração e reconciliação financeira",
+        "Atuação no projeto de Cocriação do CAS (abertura de conta PJ) com Java 21, Redis e Kubernetes em escala nacional",
+        "Construção de pipelines de CI/CD com quality gates (SonarQube, lint, testes automatizados), padronizando build e deploy de múltiplos microsserviços",
+        "Desenvolvimento e manutenção do sistema satélite da cooperativa (PHP), abrangendo módulos de solicitação de crédito, propostas, cobrança e negociação de dívidas",
+        "Integrações via APIs RESTful com core bancário e bureaus de crédito, garantindo sincronização de dados e conformidade regulatória",
+        "Troubleshooting de produção: otimização de queries SQL Server/PostgreSQL, análise de performance de endpoints críticos e ETLs com Python/Pandas para reconciliação financeira",
       ],
       tech: [
+        "Java 21",
         "PHP",
         "Kubernetes",
+        "Redis",
         "PostgreSQL",
         "SQL Server",
+        "SonarQube",
         "Python",
         "Pandas",
         "REST APIs",
@@ -272,6 +281,12 @@ export const portfolioData = {
 
   education: [
     {
+      institution: "Faculdade Donaduzzi",
+      degree: "Pós-graduação em Sistemas Inteligentes (IA, IoT e Modernização de Software)",
+      period: "Em andamento",
+      highlight: "",
+    },
+    {
       institution: "Biopark Educação",
       degree: "Bacharelado em Engenharia de Software",
       period: "2023 — 2026",
@@ -281,13 +296,11 @@ export const portfolioData = {
 
   certifications: [
     {
-      name: "Google Cloud Engineering Certification",
+      name: "Google Cloud Associate Cloud Engineer",
       issuer: "Google",
-      year: "2025",
+      year: "Em andamento (previsão 2026)",
     },
     { name: "Laravel — Rocketseat", issuer: "Rocketseat", year: "2024" },
-    { name: "PHP — Alura", issuer: "Alura", year: "2023" },
-    { name: "Laravel e Symfony — Alura", issuer: "Alura", year: "2023" },
   ],
 
   achievements: [
@@ -320,7 +333,7 @@ export const portfolioData = {
     sectionLabel: "Sobre mim",
     sectionTitle: "Desenvolvedor Full-Stack com",
     sectionTitleAccent: "viés de infraestrutura",
-    bio: "Sou desenvolvedor Full Stack focado em sistemas críticos. Atualmente atuo no Sicredi Vale do Piquiri Abcd PR/SP, onde trabalho no principlamente sistema da cooperativa. Antes disso, passei dois anos modernizando um ERP legado em PHP — automatizando fluxos e otimizando performance em produção.",
+    bio: "Sou desenvolvedor Full Stack focado em sistemas críticos. Atualmente atuo no Sicredi Vale do Piquiri, trabalhando no projeto de Cocriação do CAS (abertura de conta PJ) com Java 21 e Kubernetes. Antes disso, passei quase dois anos modernizando um ERP legado em PHP — automatizando fluxos e otimizando performance em produção.",
     languages: [
       { name: "Português", level: "Nativo" },
       { name: "Inglês", level: "Avançado — B2" },
@@ -341,6 +354,7 @@ export const portfolioData = {
           "PHP",
           "Laravel",
           "Symfony",
+          "Java 21",
           "Node.js",
           "NestJS",
           "Python",
@@ -358,7 +372,7 @@ export const portfolioData = {
       },
       {
         label: "Infraestrutura",
-        items: ["Kubernetes", "Docker", "RabbitMQ", "CI/CD", "Linux"],
+        items: ["Kubernetes", "Kafka", "Docker", "RabbitMQ", "CI/CD", "SonarQube", "Linux"],
       },
       {
         label: "Ferramentas",
